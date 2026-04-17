@@ -2,9 +2,10 @@
 #include <iostream>
 
 int main() {
-    Map map;
+    Snake snake;
 
     map.set();
+    snake.at();
     map.show();
     
     

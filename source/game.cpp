@@ -1,6 +1,8 @@
 #include "../header/game.hpp"
 #include <iostream>
 
+Map map;
+
 void Map::set() {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
@@ -28,4 +30,8 @@ void Map::show() {
         }
         std::cout << "\n";
     }
+}
+
+void Snake::at(){
+   map.map[headY][headX] = SnakeHead;
 }

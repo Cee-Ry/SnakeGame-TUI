@@ -18,7 +18,17 @@ struct Map {
 };
 
 struct Snake {
-    char SnakeHead {'*'};
-}
+    Map nav;
+    char SnakeHead {'O'};
+    char SnakeBody {'*'};
+    
+    int headX {nav.width /2};
+    int headXx {nav.width /2};
+    int headY {nav.height /2};
+    
+    void at();
+};
+
+extern Map map;
 
 #endif
