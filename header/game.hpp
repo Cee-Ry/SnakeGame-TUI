@@ -1,8 +1,6 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
-#include <string>
-
 struct Map {
     static const int width = 80;
     static const int height = 30;
@@ -15,14 +13,26 @@ struct Map {
 };
 
 struct Snake {
-    Map nav;
+    bool isDead {false};
+    int speed {500};
+
+    Map position;
     char SnakeHead {'O'};
     char SnakeBody {'*'};
     
-    int headX {nav.width /2};
-    int headY {nav.height /2};
+    int headX {position.width /2};
+    int headY {position.height /2};
     
     void at();
+    void move();
+    
+    enum direction {
+        STAY,
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    };
 };
 
 extern Map map;

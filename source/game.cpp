@@ -1,4 +1,6 @@
 #include "../header/game.hpp"
+#include "../header/func.hpp"
+
 #include <iostream>
 
 Map map;
