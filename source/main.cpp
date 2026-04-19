@@ -1,28 +1,14 @@
-#include "../header/game.hpp"
-#include "../header/func.hpp"
-
-// #include <iostream> is in func.hpp
-#include <thread>
-#include <chrono>
-
-Functions func;
+#include "../headers/allIncludes.hpp"
 
 int main() {
-    func.hideCursor();
+    hideCursor();
 
-    while (!snake.isDead) {
+    while (true) {
         map.set();
-        snake.at();
-        snake.move();
-        snake.passThroughWalls();
-        map.show();
-        
-        std::this_thread::sleep_for(std::chrono::milliseconds(snake.speed));
-        func.clearScreen();
 
-        std::cout << "X: " << snake.headX 
-            << "\nY: " << snake.headY << '\n';
+        std::cin.get();
+        clearScreen();
     }
-    
+
     return 0;
 }
