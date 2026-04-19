@@ -2,6 +2,7 @@
 #define ALLINCLUDES_HPP
 
 #include "../headers/map.hpp"
+#include "../headers/snake.hpp"
 
 // === Here are Global/Universal Functions
 #include <iostream>
