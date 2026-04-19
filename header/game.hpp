@@ -14,7 +14,7 @@ struct Map {
 
 struct Snake {
     bool isDead {false};
-    int speed {100};
+    int speed {50};
 
     Map position;
     char SnakeHead {'O'};

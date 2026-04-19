@@ -49,7 +49,7 @@ void Snake::at(){
 }
 
 void Snake::move() {
-    direction moveTo = DOWN;
+    direction moveTo = RIGHT;
 
     switch (moveTo) {
         case UP:
@@ -74,5 +74,10 @@ void Snake::passThroughWalls() {
         headY = map.height - 2;
     } else if (headY == map.height - 1) {
         headY = 1;
+    } else if (headX == 1) {
+        headX = map.width - 4;
+    } else if (headX + 1 == map.width - 2) {
+        headX = 2;
     }
+      
 }

@@ -16,11 +16,10 @@ int main() {
         snake.move();
         snake.passThroughWalls();
         map.show();
-        //snake.move();
         
         std::this_thread::sleep_for(std::chrono::milliseconds(snake.speed));
-
         func.clearScreen();
+
         std::cout << "X: " << snake.headX 
             << "\nY: " << snake.headY << '\n';
     }
