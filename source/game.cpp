@@ -1,5 +1,4 @@
 #include "../header/game.hpp"
-#include "../header/func.hpp"
 
 #include <iostream>
 
@@ -47,4 +46,33 @@ void Map::show() {
 void Snake::at(){
    map.map[headY][headX] = SnakeHead;
    map.map[headY][headX + 1] = SnakeHead;
+}
+
+void Snake::move() {
+    direction moveTo = DOWN;
+
+    switch (moveTo) {
+        case UP:
+            headY--;
+            break;
+        case DOWN:
+            headY++;
+            break;
+        case LEFT:
+            headX--;
+            break;
+        case RIGHT:
+            headX++;
+            break;
+        default:
+            break;
+    }
+}
+
+void Snake::passThroughWalls() {
+    if (headY == 0) {
+        headY = map.height - 2;
+    } else if (headY == map.height - 1) {
+        headY = 1;
+    }
 }
