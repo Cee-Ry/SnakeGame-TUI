@@ -9,7 +9,7 @@ A sleek, terminal-based Snake game built in C++ with a minimalist text user inte
 - **Easy to build** with standard C++ and ncurses-compatible libraries
 - **Small, portable codebase** ideal for learning and customization
 
-> Note: This project is still a work in progress. Some listed features and controls may not be fully implemented yet.
+> Note: This project is still a work in progress. Some listed features and controls may not be fully implemented yet. CMakeList.txt is also useless(for now)
 
 ## Controls
 
