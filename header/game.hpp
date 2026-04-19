@@ -14,7 +14,7 @@ struct Map {
 
 struct Snake {
     bool isDead {false};
-    int speed {500};
+    int speed {100};
 
     Map position;
     char SnakeHead {'O'};
@@ -25,6 +25,7 @@ struct Snake {
     
     void at();
     void move();
+    void passThroughWalls();
     
     enum direction {
         STAY,
