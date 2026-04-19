@@ -25,6 +25,9 @@ void Map::update() {
             }
         }
     }
+
+    outline[snake.headY][snake.headX] = snake.head;
+    outline[snake.headY][snake.headX1] = snake.head;
 }
 
 void Map::display() {
