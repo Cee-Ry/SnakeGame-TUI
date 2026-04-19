@@ -2,9 +2,12 @@
 
 int main() {
     hideCursor();
+    
+    map.set();
 
     while (true) {
-        map.set();
+        map.update();
+        map.display();
 
         std::cin.get();
         clearScreen();
