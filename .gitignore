@@ -1,3 +1,2 @@
-build/snake
-build/CMakeCache.txt
-build/CMakeFiles
+# Ignore the build directory entirely
+build/
