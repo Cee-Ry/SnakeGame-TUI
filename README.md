@@ -24,6 +24,7 @@ A sleek, terminal-based Snake game built in C++ with a minimalist text user inte
 1. Clone the repository:
    ```bash
    git clone https://github.com/Cee-Ry/SnakeGame-TUI.git
+   mkdir -p SnakeGame-TUI/build
    cd SnakeGame-TUI/build
    ```
 
@@ -41,7 +42,7 @@ A sleek, terminal-based Snake game built in C++ with a minimalist text user inte
 
 - `header/` - game class declarations
 - `source/` - implementation and program entry point
-- `main` - compiled executable target
+- `snake` - compiled executable target. located inside `build/` directory
 
 ## Customize
 
