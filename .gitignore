@@ -1,4 +1,3 @@
-snake
-snake.exe
-main
-doOver/*
+build/snake
+build/CMakeCache.txt
+build/CMakeFiles
