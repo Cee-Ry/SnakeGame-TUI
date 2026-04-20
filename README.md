@@ -24,12 +24,12 @@ A sleek, terminal-based Snake game built in C++ with a minimalist text user inte
 1. Clone the repository:
    ```bash
    git clone https://github.com/Cee-Ry/SnakeGame-TUI.git
-   cd SnakeGame-TUI
+   cd SnakeGame-TUI/build
    ```
 
 2. Build the game:
    ```bash
-   g++ -std=c++17 source/main.cpp source/game.cpp -o snake -lncurses
+   cmake .. && make
    ```
 
 3. Run it:
