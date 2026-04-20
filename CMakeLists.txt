@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project(SnakeGame-TUI)
+
+add_executable(snake
+    source/main.cpp
+    source/map.cpp
+    source/snake.cpp
+)
+
+find_package(Curses REQUIRED)
+target_link_libraries(snake ${CURSES_LIBRARIES})
