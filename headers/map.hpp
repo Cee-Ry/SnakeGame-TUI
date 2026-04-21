@@ -1,7 +1,7 @@
 #ifndef MAP_HPP
 #define MAP_HPP
 
-#include <iostream>
+#include <string>
 
 struct Map {
     static const int width = 50;

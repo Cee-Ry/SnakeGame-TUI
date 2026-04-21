@@ -1,4 +1,7 @@
-#include "../headers/allIncludes.hpp"
+#include "../headers/map.hpp"
+#include "../headers/snake.hpp"
+#include <iostream>
+
 Map map;
 
 void Map::set() {

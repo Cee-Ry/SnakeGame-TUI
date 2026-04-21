@@ -1,7 +1,7 @@
-#include "../headers/allIncludes.hpp"
+#include "../headers/map.hpp"
+#include <iostream>
 
 int main() {
-    hideCursor();
     
     map.set();
 
@@ -10,7 +10,6 @@ int main() {
         map.display();
 
         std::cin.get();
-        clearScreen();
     }
 
     return 0;

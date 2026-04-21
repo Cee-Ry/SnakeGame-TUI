@@ -1,4 +1,4 @@
-#include "../headers/allIncludes.hpp"
+#include "../headers/snake.hpp"
 
 Snake snake;
 
