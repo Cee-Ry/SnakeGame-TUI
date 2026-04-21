@@ -1,8 +1,8 @@
 #include "../headers/snake.hpp"
 #include "../headers/map.hpp"
+#include <ncurses.h>
 
 Snake snake;
-Snake::Directions moveTo = Snake::LEFT;
 
 void Snake::goTo() {
     switch (moveTo) {
@@ -21,16 +21,16 @@ void Snake::goTo() {
 
             break;
         case RIGHT:
-            ++headX;
+            headX += 2;
             headX1 = headX + 1;
-            if (headX1 == map.width - 2) {
+            if (headX1 == map.width - 3) {
                 headX = 2;
                 headX1 = headX + 1;
             }
 
             break;
         case LEFT:
-            --headX;
+            headX -= 2;
             headX1 = headX + 1;
             if (headX == 1) {
                 headX = map.width - 4;
@@ -40,5 +40,22 @@ void Snake::goTo() {
             break;
         default:
             break;
+    }
+}
+
+void Snake::nav() {
+    timeout(speed);
+    char key;
+
+    key = getch();
+
+    if (key == 'w' || key == 'W') {
+        moveTo = UP;
+    } else if (key == 's' || key == 'S') {
+        moveTo = DOWN;
+    } else if (key == 'd' || key == 'D') {
+        moveTo = RIGHT;
+    } else if (key == 'a' || key == 'A') {
+        moveTo = LEFT;
     }
 }

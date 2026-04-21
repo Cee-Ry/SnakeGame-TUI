@@ -12,8 +12,11 @@ struct Snake {
     int headX1 {headX + 1};
 
     enum Directions {STAY, UP, DOWN, RIGHT, LEFT};
-    
+    Directions moveTo = STAY;
+    int speed {100};
+
     void goTo();
+    void nav();
 };
 
 extern Snake snake;
