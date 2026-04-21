@@ -10,7 +10,10 @@ struct Snake {
     int headY {map.height / 2};
     int headX {map.width / 2};
     int headX1 {headX + 1};
+
+    enum Directions {STAY, UP, DOWN, RIGHT, LEFT};
     
+    void goTo();
 };
 
 extern Snake snake;

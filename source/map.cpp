@@ -38,6 +38,6 @@ void Map::display() {
         for (int j = 0; j < width; j++) {
             std::cout << outline[i][j];
         }
-        std::cout << '\n';
+        std::cout << "\n\r";
     }
 }
