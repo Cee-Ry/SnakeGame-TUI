@@ -7,5 +7,7 @@ add_executable(snake
     source/snake.cpp
 )
 
+target_include_directories(snake PUBLIC "headers")
+
 find_package(Curses REQUIRED)
 target_link_libraries(snake ${CURSES_LIBRARIES})
