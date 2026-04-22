@@ -23,7 +23,7 @@ void Snake::goTo() {
         case RIGHT:
             headX += 2;
             headX1 = headX + 1;
-            if (headX1 == map.width - 3) {
+            if (headX1 == map.width - 1) {
                 headX = 2;
                 headX1 = headX + 1;
             }
@@ -32,7 +32,7 @@ void Snake::goTo() {
         case LEFT:
             headX -= 2;
             headX1 = headX + 1;
-            if (headX == 1) {
+            if (headX == 0) {
                 headX = map.width - 4;
                 headX1 = headX + 1;
             }
@@ -43,11 +43,12 @@ void Snake::goTo() {
     }
 }
 
+#include <iostream>
 void Snake::nav() {
     timeout(speed);
     char key;
 
-    key = getch();
+    key = std::cin.get();
 
     if (key == 'w' || key == 'W') {
         moveTo = UP;

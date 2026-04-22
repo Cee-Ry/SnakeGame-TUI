@@ -4,7 +4,7 @@
 #include <string>
 
 struct Map {
-    static const int width = 50;
+    static const int width = 52;
     static const int height = 20;
 
     std::string outline[height][width];
