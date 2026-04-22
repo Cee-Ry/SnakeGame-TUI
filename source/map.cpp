@@ -1,5 +1,6 @@
 #include "../headers/map.hpp"
 #include "../headers/snake.hpp"
+#include "../headers/food.hpp"
 #include <iostream>
 
 Map map;
@@ -31,6 +32,17 @@ void Map::update() {
 
     outline[snake.headY][snake.headX] = snake.head;
     outline[snake.headY][snake.headX1] = snake.head;
+
+    while (food.isEaten) {
+    food.Y = food.fruitY();
+    food.X = food.fruitX();
+    
+    food.isEaten = false;
+    }
+
+    outline[food.Y][food.X] = food.fruit;
+    outline[food.Y][food.X + 1] = food.fruit;
+    std::cout << "FY: " << food.Y << "\n\rFX: " << food.X << "\n\r";
 }
 
 void Map::display() {
