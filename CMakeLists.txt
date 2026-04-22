@@ -5,6 +5,7 @@ add_executable(snake
     source/main.cpp
     source/map.cpp
     source/snake.cpp
+    source/food.cpp
 )
 
 target_include_directories(snake PUBLIC "headers")
