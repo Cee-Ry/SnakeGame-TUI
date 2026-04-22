@@ -43,12 +43,11 @@ void Snake::goTo() {
     }
 }
 
-#include <iostream>
 void Snake::nav() {
     timeout(speed);
     char key;
 
-    key = std::cin.get();
+    key = getch();
 
     if (key == 'w' || key == 'W') {
         moveTo = UP;
