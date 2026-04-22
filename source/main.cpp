@@ -8,7 +8,7 @@ int main() {
     
     map.set();
 
-    while (true) {
+    while (snake.inGame) {
         snake.goTo();
         map.update();
         map.display();

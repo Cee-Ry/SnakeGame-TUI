@@ -57,5 +57,7 @@ void Snake::nav() {
         moveTo = RIGHT;
     } else if (key == 'a' || key == 'A') {
         moveTo = LEFT;
+    } else if (key == 'q' || key == 'Q') {
+        inGame = false;
     }
 }

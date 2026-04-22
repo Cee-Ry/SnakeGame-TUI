@@ -13,6 +13,7 @@ struct Snake {
 
     enum Directions {STAY, UP, DOWN, RIGHT, LEFT};
     Directions moveTo = STAY;
+    bool inGame = true;
     int speed {100};
 
     void goTo();
