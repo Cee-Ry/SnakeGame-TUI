@@ -13,7 +13,7 @@ struct randomPosition {
         , dist(min, max) {}
 
     int position() {
-        return dist(rng);
+        return (dist(rng) / 2) * 2;
     }
 };
 
