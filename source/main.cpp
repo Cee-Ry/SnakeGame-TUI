@@ -1,5 +1,6 @@
 #include "../headers/map.hpp"
 #include "../headers/snake.hpp"
+#include "../headers/food.hpp"
 #include <ncurses.h>
 #include <iostream>
 
@@ -10,11 +11,12 @@ int main() {
     map.set();
 
     while (snake.inGame) {
+        std::cout << "score: " << food.score << "\n\r";
         snake.goTo();
         map.update();
         map.display();
-        std::cout << "Y: " << snake.headY <<
-            "\tX: " << snake.headX << "\n\r";
+        // std::cout << "Y: " << snake.headY <<
+            // "\tX: " << snake.headX << "\n\r";
         snake.nav();
 
         clear();

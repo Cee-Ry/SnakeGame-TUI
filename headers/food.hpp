@@ -24,6 +24,7 @@ struct Food {
     int Y = fruitY();
     int X = fruitX();
 
+    int score {0};
     bool isEaten {true};
 
     std::string fruit {"\033[33;43mF\033[0m"};
