@@ -9,7 +9,7 @@ struct randomPosition {
     std::uniform_int_distribution<int> dist;
 
     randomPosition(int min, int max) 
-        : rng(std::random_device{}())
+        : rng(std::random_device()())
         , dist(min, max) {}
 
     int position() {

@@ -34,8 +34,8 @@ void Map::update() {
     outline[snake.headY][snake.headX1] = snake.head;
 
     while (food.isEaten) {
-    food.Y = food.fruitY();
-    food.X = food.fruitX();
+        food.Y = food.fruitY();
+        food.X = food.fruitX();
     
     food.isEaten = false;
     }
@@ -43,6 +43,12 @@ void Map::update() {
     outline[food.Y][food.X] = food.fruit;
     outline[food.Y][food.X + 1] = food.fruit;
     std::cout << "FY: " << food.Y << "\n\rFX: " << food.X << "\n\r";
+
+    if (snake.headY == food.Y && 
+            (snake.headX == food.X || snake.headX == food.X + 1)) {
+        food.isEaten = true;
+    }
+
 }
 
 void Map::display() {
