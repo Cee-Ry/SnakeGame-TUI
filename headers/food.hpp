@@ -1,6 +1,7 @@
 #ifndef FOOD_HPP
 #define FOOD_HPP
 
+#include "map.hpp"
 #include <string>
 #include <random>
 
@@ -13,11 +14,12 @@ struct randomPosition {
         , dist(min, max) {}
 
     int position() {
-        return (dist(rng) / 2) * 2;
+        return dist(rng);
     }
 };
 
 struct Food {
+
     int fruitY();
     int fruitX();
 

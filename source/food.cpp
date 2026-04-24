@@ -9,6 +9,7 @@ int Food::fruitY() {
     return randY.position();
 }
 int Food::fruitX() {
-    return randX.position();
+    int evenNum {randX.position()};
+    return (evenNum / 2) * 2;
 }
 
