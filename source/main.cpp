@@ -11,7 +11,7 @@ int main() {
     map.set();
 
     while (snake.inGame) {
-        std::cout << "score: " << food.score << "\n\r";
+        std::cout << "X: " << food.X << "\tY: " << food.Y << "\n\rscore: " << food.score << "\n\r";
         snake.goTo();
         map.update();
         map.display();
