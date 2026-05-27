@@ -18,4 +18,58 @@ void GameMap::draw() {
         }
     }
     attroff(COLOR_PAIR(1));
+
 }
+
+void GameMap::update(int &Y, int &X) {
+    attron(COLOR_PAIR(2));
+    mvprintw(Y, X, "%s", s.head.c_str());
+    attroff(COLOR_PAIR(2));
+}
+
+void GameMap::nav(int &Y, int &X) {
+    int key = getch();
+
+    switch(key) {
+        case KEY_UP:
+            dir = UP;
+            break;
+
+        case KEY_DOWN:
+            dir = DOWN;
+            break;
+
+        case KEY_LEFT:
+            dir = LEFT;
+            break;
+
+        case KEY_RIGHT:
+            dir = RIGHT;
+            break;
+
+        default:
+            break;
+    }
+
+    switch (dir) {
+        case UP:
+            --Y;
+            break;
+
+        case DOWN:
+            ++Y;
+            break;
+
+        case LEFT:
+            X -= 2;
+            break;
+
+        case RIGHT:
+            X += 2;
+            break;
+
+        default:
+            break;
+    }
+}
+
