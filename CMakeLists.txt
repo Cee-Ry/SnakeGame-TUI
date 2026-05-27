@@ -3,6 +3,7 @@ project(SnakeGame-TUI)
 
 add_executable(snake
     source/main.cpp
+    source/game_api.cpp
 )
 
 install(TARGETS snake
@@ -16,4 +17,4 @@ target_include_directories(snake PUBLIC
     ${CURSES_INCLUDE_DIR}
 )
 
-target_link_libraries(menedrix ${CURSES_LIBRARY})
+target_link_libraries(snake ${CURSES_LIBRARY})
