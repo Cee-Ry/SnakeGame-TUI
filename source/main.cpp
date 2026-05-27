@@ -25,6 +25,7 @@ int main() {
     snake.X = (COLS / 2) - ((COLS / 2) % 2);
     int &speed = snake.speed;
     int sel {0};
+    int count {0};
     
     while (run) {
         choices(sel, play, run);

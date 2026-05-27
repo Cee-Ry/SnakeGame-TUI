@@ -13,7 +13,7 @@ struct Snake {
     std::string tail {"TT"};
     int Y {};
     int X {};
-    int speed {50};
+    int speed {100};
 };
 
 struct GameMap {
