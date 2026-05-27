@@ -3,12 +3,17 @@ project(SnakeGame-TUI)
 
 add_executable(snake
     source/main.cpp
-    source/map.cpp
-    source/snake.cpp
-    source/food.cpp
 )
 
-target_include_directories(snake PUBLIC "headers")
+install(TARGETS snake
+    DESTINATION $ENV{HOME}/.local/bin
+)
 
 find_package(Curses REQUIRED)
-target_link_libraries(snake ${CURSES_LIBRARIES})
+
+target_include_directories(snake PUBLIC
+    "headers"
+    ${CURSES_INCLUDE_DIR}
+)
+
+target_link_libraries(menedrix ${CURSES_LIBRARY})
