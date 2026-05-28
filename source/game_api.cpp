@@ -47,6 +47,9 @@ void GameMap::nav(int &Y, int &X) {
             dir = RIGHT;
             break;
 
+        case 27: pause = true;
+            break;
+
         default:
             break;
     }
@@ -54,18 +57,22 @@ void GameMap::nav(int &Y, int &X) {
     switch (dir) {
         case UP:
             --Y;
+            if (Y == 4) Y = LINES - 2;
             break;
 
         case DOWN:
             ++Y;
+            if (Y == LINES - 1) Y = 5;
             break;
 
         case LEFT:
             X -= 2;
+            if (X == width) X = COLS - (width + 2);
             break;
 
         case RIGHT:
             X += 2;
+            if (X == COLS - width) X = width + 2;
             break;
 
         default:

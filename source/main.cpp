@@ -43,6 +43,8 @@ int main() {
             map.update(snake.Y, snake.X);
             map.nav(snake.Y, snake.X);
 
+            // if (map.pause)
+
             clear();
             refresh();
         }

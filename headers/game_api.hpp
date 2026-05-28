@@ -23,6 +23,8 @@ struct GameMap {
     int width {16};
     int height {4};
 
+    bool pause {};
+
     void draw();
     void update(int &Y, int &X);
     void nav(int &Y, int &X);
